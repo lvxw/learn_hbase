@@ -1,0 +1,36 @@
+#Soft base_path
+BASE_PATH=/usr/local
+
+#Hadoop
+HADOOP_INSTALL=$BASE_PATH/hadoop
+LZO_JAR=$HADOOP_INSTALL/share/hadoop/common/hadoop-lzo-0.4.20-SNAPSHOT.jar
+
+#Hive
+HIVE_INSTALL=$BASE_PATH/hive
+
+#Spark
+SPARK_INSTALL=$BASE_PATH/spark
+
+#Sqoop
+SQOOP_INSTALL=$BASE_PATH/sqoop
+
+#Kafka
+BROKER_LIST=master:9092,slave1:9092,slave2:9092
+
+#Zookeeper
+ZK_QUORUM=master:2181,slave1:2181,slave2:2181
+
+
+# Mysql
+PRACTICE_SERVER='service'
+PRACTICE_PORT='3306'
+PRACTICE_USER='root'
+PRACTICE_PWD='service'
+PRACTICE_DB='test'
+PRACTICE_CHARSET='--default-character-set=utf8'
+PRACTICE_CHARACTOR="useUnicode=true&characterEncoding=utf-8"
+CONN_STR_PRACTICE_DB="-h$PRACTICE_SERVER -P$PRACTICE_PORT -u$PRACTICE_USER -p$PRACTICE_PWD $PRACTICE_DB $PRACTICE_CHARSET"
+JDBC_CONNECT=jdbc:mysql://"$PRACTICE_SERVER":"$PRACTICE_PORT"/"$PRACTICE_DB"?"$PRACTICE_CHARACTOR"
+
+# 运行模式
+RUN_PATTERN=product
